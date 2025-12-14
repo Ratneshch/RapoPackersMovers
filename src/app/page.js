@@ -1,3 +1,4 @@
+import ContactUs from '@/components/ContactUs'
 import CustomerReviews from '@/components/CustomerReviews'
 import HeroBanner from '@/components/HeroBanner'
 import OurSerives from '@/components/OurSerives'
@@ -13,6 +14,7 @@ const page = () => {
       <WhyChooseUs/>
       <Process/>
       <CustomerReviews/>
+      <ContactUs/>
     </div>
   )
 }
