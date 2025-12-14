@@ -1,3 +1,4 @@
+import CustomerReviews from '@/components/CustomerReviews'
 import HeroBanner from '@/components/HeroBanner'
 import OurSerives from '@/components/OurSerives'
 import Process from '@/components/Process'
@@ -11,6 +12,7 @@ const page = () => {
       <OurSerives/>
       <WhyChooseUs/>
       <Process/>
+      <CustomerReviews/>
     </div>
   )
 }
