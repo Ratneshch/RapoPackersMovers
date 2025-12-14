@@ -39,7 +39,7 @@ const services = [
 
 const OurSerives = () => {
   return (
-    <div className="w-full min-h-screen bg-white px-6 py-20">
+    <div className="w-full min-h-screen bg-gray-50 px-6 py-20">
 
       {/* Section Badge */}
       <h1 className="text-orange-500 text-lg px-5 py-2 bg-orange-100 rounded-full mx-auto w-fit flex items-center gap-1">
