@@ -5,7 +5,8 @@ import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 
 const CallToAction = () => {
   return (
-    <section className="w-full bg-gradient-to-br from-orange-500 via-orange-600 to-orange-500 py-28 px-6 text-white">
+    <section className="relative z-10 w-full bg-gradient-to-br from-orange-500 via-orange-500 to-orange-500 py-28 px-6 text-white ">
+
 
       <div className="max-w-4xl mx-auto text-center">
 

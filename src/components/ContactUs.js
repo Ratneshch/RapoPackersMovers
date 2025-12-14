@@ -167,7 +167,7 @@ const ContactUs = () => {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-xl flex items-center justify-center gap-2 text-lg shadow-lg transition-all"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-xl flex items-center  cursor-pointer justify-center gap-2 text-lg shadow-lg transition-all"
             >
               <FaPaperPlane />
               Get Free Quote

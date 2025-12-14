@@ -29,7 +29,7 @@ const Navbar = () => {
         </ul>
 
         {/* Call Button */}
-        <button className="flex items-center gap-2 px-5 py-2 text-lg font-semibold rounded-full bg-orange-500 hover:bg-orange-400 transition">
+        <button className="flex items-center gap-2 px-5 py-2 text-lg font-semibold rounded-full bg-orange-500 hover:bg-orange-600 transition">
           <FaPhone />
           Call Now
         </button>
