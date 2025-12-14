@@ -1,3 +1,4 @@
+import CallToAction from '@/components/CallToAction'
 import ContactUs from '@/components/ContactUs'
 import CustomerReviews from '@/components/CustomerReviews'
 import HeroBanner from '@/components/HeroBanner'
@@ -15,6 +16,7 @@ const page = () => {
       <Process/>
       <CustomerReviews/>
       <ContactUs/>
+      <CallToAction/>
     </div>
   )
 }
