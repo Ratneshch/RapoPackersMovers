@@ -11,7 +11,7 @@ const HeroBanner = () => {
       <div className="absolute inset-0 bg-[url('/bg.png')] bg-cover bg-center" />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center pb-32">
