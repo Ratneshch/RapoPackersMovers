@@ -142,7 +142,7 @@ export default function ServicesPage() {
             Need a customized solution? Let’s discuss your requirements.
           </p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition">
-            Get Free Quote →
+          <a href="/contact" > Get Free Quote →</a> 
           </button>
         </div>
       </section>

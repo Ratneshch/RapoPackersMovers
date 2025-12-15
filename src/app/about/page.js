@@ -20,7 +20,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-6 max-w-2xl mx-auto md:mx-0 text-blue-100 text-base sm:text-lg">
-            Since 1995, SwiftPack Movers has been helping families and businesses
+            Since 2024, SwiftPack Movers has been helping families and businesses
             relocate with ease, safety, and peace of mind.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
             <div className="mt-8 flex justify-center md:justify-start">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition">
-                Get Free Quote →
+             <a href="/contact" > Get Free Quote →</a> 
               </button>
             </div>
           </div>
