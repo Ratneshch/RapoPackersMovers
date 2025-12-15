@@ -51,7 +51,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full pt-18 bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
 
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center mt-6 sm:mt-8">
@@ -69,9 +69,17 @@ const ContactUs = () => {
         {/* LEFT SIDE */}
         <div className="space-y-8">
           {/* Info Cards */}
+<<<<<<< HEAD
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
               <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
+=======
+          <div className="grid grid-cols-2 gap-6">
+
+            {/* Phone */}
+            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+>>>>>>> 9cd79094d9e8e368711e195389d3fd5a869f8336
                 <FaPhoneAlt />
               </div>
               <h3 className="font-semibold">Phone</h3>
@@ -82,8 +90,20 @@ const ContactUs = () => {
               <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
                 <FaEnvelope />
               </div>
+<<<<<<< HEAD
               <h3 className="font-semibold">Email</h3>
               <p className="text-gray-500">rapopackers@gmail.com</p>
+=======
+
+              <h3 className="font-semibold text-base sm:text-lg">Email</h3>
+
+              <a
+                href="mailto:rapopackers@gmail.com"
+                className="mt-1 block text-sm sm:text-base text-gray-500 break-all hover:text-orange-500 transition"
+              >
+                rapopackers@gmail.com
+              </a>
+>>>>>>> 9cd79094d9e8e368711e195389d3fd5a869f8336
             </div>
 
             <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
@@ -156,6 +176,7 @@ const ContactUs = () => {
               />
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 name="fromLocation"
@@ -171,6 +192,26 @@ const ContactUs = () => {
                 placeholder="Moving To"
                 className="w-full pl-4 py-3 px-6 rounded-xl border"
               />
+=======
+            {/* Moving From + To */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <FaMapMarkerAlt className="absolute left-4 top-4 text-orange-500" />
+                <input
+                  type="text"
+                  placeholder="Moving From"
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+              <div className="relative">
+                <FaMapMarkerAlt className="absolute left-4 top-4 text-orange-500" />
+                <input
+                  type="text"
+                  placeholder="Moving To"
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+>>>>>>> 9cd79094d9e8e368711e195389d3fd5a869f8336
             </div>
 
             <textarea

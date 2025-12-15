@@ -20,12 +20,9 @@ const Footer = () => {
         {/* Brand */}
         <div className="text-center sm:text-left">
           <div className="flex items-center justify-center sm:justify-start gap-3 mb-6">
-            <div className="w-10 h-10 text-orange-500 flex items-center justify-center">
-              <FaTruckMoving className="text-2xl" />
+            <div className="text-orange-500 flex items-center justify-center">
+            <img src="/logor.png"/>
             </div>
-            <h2 className="text-xl font-semibold text-white">
-              RapoPackersMovers
-            </h2>
           </div>
 
           <p className="text-sm leading-relaxed max-w-sm mx-auto sm:mx-0">
@@ -37,13 +34,15 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-6">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61583242347663"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 transition-all flex items-center justify-center"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/rapopackers/"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 transition-all flex items-center justify-center"
             >
               <FaInstagram />
