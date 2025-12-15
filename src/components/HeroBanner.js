@@ -2,6 +2,7 @@ import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { CiCircleCheck } from "react-icons/ci";
+import Link from "next/link";
 
 const HeroBanner = () => {
   return (
@@ -38,21 +39,23 @@ const HeroBanner = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-base sm:text-lg">
-            <button className="group inline-flex items-center gap-2 rounded-full bg-orange-500 px-7 py-3 font-semibold text-white shadow-lg shadow-orange-500/40 transition hover:bg-orange-400">
+            <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-orange-500 px-7 py-3 font-semibold text-white shadow-lg shadow-orange-500/40 transition hover:bg-orange-400">
               Get Free Quote
               <span className="transition-transform group-hover:translate-x-1">
                 <FaLongArrowAltRight />
               </span>
-            </button>
+            </Link>
 
             <button className="inline-flex items-center gap-3 rounded-full bg-black/50 px-7 py-3 font-semibold text-white backdrop-blur-md transition hover:bg-black/70">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
                 <FaPhone />
               </span>
               <span className="text-left">
-                <span className="block text-sm leading-tight text-gray-300">
+                <a 
+                href="tel:+919820919196"
+                className="block text-sm leading-tight text-gray-300">
                   Call Now
-                </span>
+                </a>
                 <span className="block text-xs leading-tight text-gray-400">
                   24/7 Support
                 </span>
