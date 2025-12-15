@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { GoDotFill } from "react-icons/go";
+import React, { useState } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -12,10 +11,47 @@ import {
 } from "react-icons/fa";
 
 const ContactUs = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    fromLocation: "",
+    toLocation: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        fromLocation: "",
+        toLocation: "",
+        message: "",
+      });
+    } else {
+      alert("Failed to send message");
+    }
+  };
+
   return (
     <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-
-     
 
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center mt-6 sm:mt-8">
@@ -32,52 +68,40 @@ const ContactUs = () => {
 
         {/* LEFT SIDE */}
         <div className="space-y-8">
-
           {/* Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-            {/* Phone */}
-            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
+              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
                 <FaPhoneAlt />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">Phone</h3>
-              <p className="text-gray-500 mt-1 text-sm sm:text-base">
-                +91 98209 19196
-              </p>
+              <h3 className="font-semibold">Phone</h3>
+              <p className="text-gray-500">+91 98209 19196</p>
             </div>
 
-            {/* Email */}
-            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
+              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
                 <FaEnvelope />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">Email</h3>
-              <p className="text-gray-500 mt-1 text-sm sm:text-base">
-                rapopackers@gmail.com
-              </p>
+              <h3 className="font-semibold">Email</h3>
+              <p className="text-gray-500">rapopackers@gmail.com</p>
             </div>
 
-            {/* Address */}
-            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
+              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
                 <FaMapMarkerAlt />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">Address</h3>
-              <p className="text-gray-500 mt-1 text-sm sm:text-base leading-relaxed">
-                Shop No. 5, Ground Floor, Sector 15, Navi Mumbai – 400614
+              <h3 className="font-semibold">Address</h3>
+              <p className="text-gray-500">
+                Shop No. 5, Sector 15, Navi Mumbai – 400614
               </p>
             </div>
 
-            {/* Working Hours */}
-            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+            <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6">
+              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl mb-4">
                 <FaClock />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">Working Hours</h3>
-              <p className="text-gray-500 mt-1 text-sm sm:text-base">
-                24/7 Available
-              </p>
+              <h3 className="font-semibold">Working Hours</h3>
+              <p className="text-gray-500">24/7 Available</p>
             </div>
           </div>
 
@@ -88,7 +112,6 @@ const ContactUs = () => {
               src="https://www.google.com/maps?q=Vashi%20Navi%20Mumbai&output=embed"
               width="100%"
               height="260"
-              className="sm:h-[300px]"
               loading="lazy"
             />
           </div>
@@ -96,81 +119,76 @@ const ContactUs = () => {
 
         {/* RIGHT SIDE – FORM */}
         <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-10">
-
           <h3 className="text-xl sm:text-2xl font-semibold mb-2">
             Request a Free Quote
           </h3>
-          <p className="text-gray-500 mb-6 sm:mb-8 text-sm sm:text-base">
-            Fill in your details and we’ll get back to you shortly.
-          </p>
 
-          <form className="space-y-5 sm:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
 
-            {/* Name */}
             <div className="relative">
               <FaUser className="absolute left-4 top-4 text-orange-500" />
               <input
-                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                required
+                className="w-full pl-12 py-3  rounded-xl border"
               />
             </div>
 
-            {/* Email + Phone */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <FaEnvelope className="absolute left-4 top-4 text-orange-500" />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                />
-              </div>
-              <div className="relative">
-                <FaPhoneAlt className="absolute left-4 top-4 text-orange-500" />
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                />
-              </div>
+              <input
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                required
+                className="w-full pl-4 py-3 px-6 rounded-xl border"
+              />
+              <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                required
+                className="w-full pl-4 py-3 px-6 rounded-xl border"
+              />
             </div>
 
-            {/* Moving From + To */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <FaMapMarkerAlt className="absolute left-4 top-4 text-orange-500" />
-                <input
-                  type="text"
-                  placeholder="Moving From"
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                />
-              </div>
-              <div className="relative">
-                <FaMapMarkerAlt className="absolute left-4 top-4 text-orange-500" />
-                <input
-                  type="text"
-                  placeholder="Moving To"
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                />
-              </div>
+              <input
+                name="fromLocation"
+                value={form.fromLocation}
+                onChange={handleChange}
+                placeholder="Moving From"
+                className="w-full pl-4 py-3 px-6 rounded-xl border"
+              />
+              <input
+                name="toLocation"
+                value={form.toLocation}
+                onChange={handleChange}
+                placeholder="Moving To"
+                className="w-full pl-4 py-3 px-6 rounded-xl border"
+              />
             </div>
 
-            {/* Message */}
             <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               rows="4"
               placeholder="Tell us about your requirements..."
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full px-4 py-3 rounded-xl border"
             />
 
-            {/* Button */}
             <button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 sm:py-4 rounded-xl flex items-center justify-center gap-2 text-base sm:text-lg shadow-lg transition-all"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-xl flex items-center justify-center gap-2"
             >
-              <FaPaperPlane />
-             Submit
+              <FaPaperPlane /> Submit
             </button>
+
           </form>
         </div>
       </div>
