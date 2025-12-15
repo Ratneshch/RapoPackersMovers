@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 
@@ -29,10 +30,10 @@ const CallToAction = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 sm:mt-12">
 
           {/* Primary */}
-          <button className="w-full sm:w-auto px-8 sm:px-10 py-4 bg-white text-orange-500 font-semibold rounded-full flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all">
+          <Link href="/contact" className="w-full sm:w-auto px-8 sm:px-10 py-4 bg-white text-orange-500 font-semibold rounded-full flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all">
             Get Free Quote
             <FaArrowRight />
-          </button>
+          </Link>
 
           {/* Secondary */}
           <a
