@@ -13,7 +13,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full pt-18 bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
 
      
 
@@ -34,7 +34,7 @@ const ContactUs = () => {
         <div className="space-y-8">
 
           {/* Info Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6">
 
             {/* Phone */}
             <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl transition-all">
@@ -52,10 +52,15 @@ const ContactUs = () => {
               <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
                 <FaEnvelope />
               </div>
+
               <h3 className="font-semibold text-base sm:text-lg">Email</h3>
-              <p className="text-gray-500 mt-1 text-sm sm:text-base">
+
+              <a
+                href="mailto:rapopackers@gmail.com"
+                className="mt-1 block text-sm sm:text-base text-gray-500 break-all hover:text-orange-500 transition"
+              >
                 rapopackers@gmail.com
-              </p>
+              </a>
             </div>
 
             {/* Address */}
@@ -137,7 +142,7 @@ const ContactUs = () => {
             </div>
 
             {/* Moving From + To */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <div className="relative">
                 <FaMapMarkerAlt className="absolute left-4 top-4 text-orange-500" />
                 <input
