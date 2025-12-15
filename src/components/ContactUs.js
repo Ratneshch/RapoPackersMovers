@@ -175,7 +175,7 @@ const ContactUs = () => {
               className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 sm:py-4 rounded-xl flex items-center justify-center gap-2 text-base sm:text-lg shadow-lg transition-all"
             >
               <FaPaperPlane />
-              Get Free Quote
+             Submit
             </button>
           </form>
         </div>

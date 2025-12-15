@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl md:text-3xl font-bold cursor-pointer">
           <FaTruckMoving className="text-orange-500" />
-          <h1>RapoPackersMovers</h1>
+          <h1><a href="/">RapoPackersMovers</a></h1>
         </div>
 
         {/* Desktop Menu */}
