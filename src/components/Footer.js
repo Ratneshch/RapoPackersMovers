@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-br from-[#0b1020] via-[#0e1a35] to-[#07142b] text-gray-300 px-4 sm:px-6 pt-16 sm:pt-20">
+    <footer className="w-full bg-gradient-to-br from-[#0b1020] via-[#0e1a35] to-[#07142b] text-gray-300 px-4 sm:px-6 pt-10 sm:pt-15 pb-10 sm:pb-0">
       
       {/* Top Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 pb-16">
@@ -91,58 +91,56 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div className="text-center sm:text-left">
-          <h3 className="text-white font-semibold text-lg mb-6">
-            Contact Us
-          </h3>
+<div className="text-center">
+  <h3 className="text-white font-semibold text-lg mb-8">
+    Contact Us
+  </h3>
 
-          <ul className="space-y-6 text-sm">
-            
-            <li className="flex flex-row items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
-                <FaPhoneAlt />
-              </div>
-              <div>
-                <p className="text-gray-400">Call Us</p>
-                <p className="text-white font-medium">
-                  +91 98209 19196
-                </p>
-              </div>
-            </li>
+  <ul className="space-y-8 text-sm">
 
-            <li className="flex flex-row items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
-                <FaEnvelope />
-              </div>
-              <div>
-                <p className="text-gray-400">Email Us</p>
-                <p className="text-white font-medium">
-                  rapopackers@gmail.com
-                </p>
-              </div>
-            </li>
+    {/* Phone */}
+    <li className="flex flex-col sm:flex-row items-center gap-3">
+      <div className="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-lg">
+        <FaPhoneAlt />
+      </div>
+      <p className="text-gray-400">Call Us</p>
+      <p className="text-white font-medium">
+        +91 98209 19196
+      </p>
+    </li>
 
-            <li className="flex flex-row items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
-                <FaMapMarkerAlt />
-              </div>
-              <div>
-                <p className="text-gray-400">Address</p>
-                <p className="text-white font-medium">
-                  Shop No. 5, Ground Floor, Sector 15, Navi Mumbai – 400614
-                </p>
-              </div>
-            </li>
+    {/* Email */}
+    <li className="flex flex-col sm:flex-row items-center gap-3">
+      <div className="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-lg">
+        <FaEnvelope />
+      </div>
+      <p className="text-gray-400">Email Us</p>
+      <p className="text-white font-medium">
+        rapopackers@gmail.com
+      </p>
+    </li>
 
-          </ul>
-        </div>
+    {/* Address */}
+    <li className="flex flex-col sm:flex-row items-center gap-3">
+      <div className="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-lg">
+        <FaMapMarkerAlt />
+      </div>
+      <p className="text-gray-400">Address</p>
+      <p className="text-white font-medium max-w-xs">
+        Shop No. 5, Ground Floor, Sector 15, Navi Mumbai – 400614
+      </p>
+    </li>
+
+  </ul>
+</div>
+
       </div>
 
       {/* Divider */}
       <div className="border-t border-white/10"></div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 text-center md:text-left">
+      <div className="max-w-7xl pb-10 mx-auto py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 text-center md:text-left">
         <p>© 2025 RapoPackersMovers. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0 justify-center">
           <span className="hover:text-orange-400 cursor-pointer">
