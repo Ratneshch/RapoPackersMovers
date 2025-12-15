@@ -5,87 +5,117 @@ import { CiCircleCheck } from "react-icons/ci";
 
 const HeroBanner = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
-
-      {/* Background Image */}
+    <section className="relative pt-20 min-h-screen overflow-hidden">
+      {/* Background Image (unchanged) */}
       <div className="absolute inset-0 bg-[url('/bg.png')] bg-cover bg-center" />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center pb-32">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-5xl flex flex-col items-center text-center">
+          {/* Badge */}
+          <h1 className="inline-flex items-center justify-center rounded-full bg-black/50 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-300 backdrop-blur-md">
+            Trusted by 1000+ Happy Customers
+          </h1>
 
-        {/* Badge */}
-        <h1 className="w-fit text-white px-4 py-2 mb-6 mt-2 bg-black/40 backdrop-blur-md text-sm font-bold rounded-full">
-          Trusted by 1000+ Happy Customers
-        </h1>
+          {/* Heading */}
+          <h2 className="mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
+            Safe &amp; Reliable{" "}
+            <span className="text-amber-400">
+              Packers and <br className="hidden sm:block" /> Movers
+            </span>{" "}
+            Services
+          </h2>
 
-        {/* Heading */}
-        <h2 className="text-white font-extrabold text-4xl md:text-6xl leading-tight mb-6">
-          Safe & Reliable{" "}
-          <span className="text-amber-500">
-            Packers and <br /> Movers
-          </span>{" "}
-          Services
-        </h2>
+          {/* Description */}
+          <p className="mt-5 max-w-2xl text-base text-gray-200 sm:text-lg md:text-xl">
+            We provide hassle-free home shifting with expert handling and secure
+            transportation. Your belongings are in safe hands with our
+            professional team.
+          </p>
 
-        {/* Description */}
-        <p className="text-gray-200 text-xl max-w-2xl">
-          We provide hassle-free home shifting with expert handling and secure
-          transportation. Your belongings are in safe hands with our professional team.
-        </p>
+          {/* Buttons */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-base sm:text-lg">
+            <button className="group inline-flex items-center gap-2 rounded-full bg-orange-500 px-7 py-3 font-semibold text-white shadow-lg shadow-orange-500/40 transition hover:bg-orange-400">
+              Get Free Quote
+              <span className="transition-transform group-hover:translate-x-1">
+                <FaLongArrowAltRight />
+              </span>
+            </button>
 
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-6 mt-10 text-xl ">
-          <button className="px-6 py-3 bg-orange-500 rounded-full flex items-center gap-2 text-white cursor-pointer">
-            Get Free Quote <FaLongArrowAltRight />
-          </button>
+            <button className="inline-flex items-center gap-3 rounded-full bg-black/50 px-7 py-3 font-semibold text-white backdrop-blur-md transition hover:bg-black/70">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
+                <FaPhone />
+              </span>
+              <span className="text-left">
+                <span className="block text-sm leading-tight text-gray-300">
+                  Call Now
+                </span>
+                <span className="block text-xs leading-tight text-gray-400">
+                  24/7 Support
+                </span>
+              </span>
+            </button>
+          </div>
 
-          <button className="px-6 py-3 bg-black/40 backdrop-blur-md rounded-full flex items-center gap-2 text-white cursor-pointer">
-            Call Now <FaPhone />
-          </button>
+          {/* Support Points */}
+          <ul className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm sm:text-base text-white">
+            <li className="flex items-center gap-2">
+              <CiCircleCheck className="text-orange-400 text-xl" />
+              100% Safe Delivery
+            </li>
+            <li className="flex items-center gap-2">
+              <CiCircleCheck className="text-orange-400 text-xl" />
+              24/7 Support
+            </li>
+            <li className="flex items-center gap-2">
+              <CiCircleCheck className="text-orange-400 text-xl" />
+              Best Price Guarantee
+            </li>
+          </ul>
+
+          {/* Bottom Stats (centered, inline) */}
+          <div className="mt-20 w-full max-w-4xl rounded-3xl bg-black/60 px-6 py-5 text-white backdrop-blur-xl">
+            <div className="grid grid-cols-2 gap-6 text-center sm:grid-cols-4">
+              <div>
+                <p className="text-2xl font-bold text-orange-400 sm:text-3xl">
+                  1+
+                </p>
+                <p className="mt-1 text-xs text-gray-300 sm:text-sm">
+                  Years Experience
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-orange-400 sm:text-3xl">
+                  1K+
+                </p>
+                <p className="mt-1 text-xs text-gray-300 sm:text-sm">
+                  Happy Customers
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-orange-400 sm:text-3xl">
+                  10+
+                </p>
+                <p className="mt-1 text-xs text-gray-300 sm:text-sm">
+                  Expert Team
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-orange-400 sm:text-3xl">
+                  2+
+                </p>
+                <p className="mt-1 text-xs text-gray-300 sm:text-sm">
+                  Cities Covered
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Support Points */}
-        <ul className="text-white flex flex-wrap justify-center gap-12 mt-16 text-xl">
-          <li className="flex items-center gap-2">
-            <CiCircleCheck className="text-orange-500" />
-            100% Safe Delivery
-          </li>
-          <li className="flex items-center gap-2">
-            <CiCircleCheck className="text-orange-500" />
-            24/7 Support
-          </li>
-          <li className="flex items-center gap-2">
-            <CiCircleCheck className="text-orange-500" />
-            Best Price Guarantee
-          </li>
-        </ul>
       </div>
-
-      {/* 🔥 Bottom Blur Stats Section */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/50 backdrop-blur-xl z-20">
-        <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
-          <div>
-            <p className="text-3xl font-bold text-orange-500">1+</p>
-            <p className="text-sm">Years Experience</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-orange-500">1K+</p>
-            <p className="text-sm">Happy Customers</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-orange-500">10+</p>
-            <p className="text-sm">Expert Team</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-orange-500">2+</p>
-            <p className="text-sm">Cities Covered</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

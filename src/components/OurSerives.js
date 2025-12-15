@@ -1,8 +1,7 @@
 import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { MdHouse, MdBusiness, MdLocalShipping } from "react-icons/md";
-import { FaBoxOpen, FaTruckLoading, FaMapMarkerAlt } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaBoxOpen, FaTruckLoading, FaMapMarkerAlt, FaLongArrowAltRight } from "react-icons/fa";
 
 const services = [
   {
@@ -37,52 +36,61 @@ const services = [
   },
 ];
 
-const OurSerives = () => {
+const OurServices = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-50 px-6 py-20">
+    <section className="w-full bg-gray-50 px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
-      {/* Section Badge */}
-      <h1 className="text-orange-500 text-lg px-5 py-2 bg-orange-100 rounded-full mx-auto w-fit flex items-center gap-1">
-        <GoDotFill /> Our Services
-      </h1>
+      {/* Badge */}
+      <div className="flex justify-center">
+        <h1 className="text-orange-500 text-sm sm:text-base px-4 py-2 bg-orange-100 rounded-full flex items-center gap-1">
+          <GoDotFill /> Our Services
+        </h1>
+      </div>
 
       {/* Heading */}
-      <h2 className="text-5xl text-center font-semibold mt-8">
-        Comprehensive Moving <br /> Solutions
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-semibold mt-6 sm:mt-8 leading-tight">
+        Comprehensive Moving <br className="hidden sm:block" /> Solutions
       </h2>
 
       {/* Description */}
-      <p className="text-center text-xl mt-6 text-gray-500 max-w-3xl mx-auto">
+      <p className="text-center text-base sm:text-lg lg:text-xl mt-4 sm:mt-6 text-gray-500 max-w-3xl mx-auto">
         From packing to unpacking, we offer end-to-end relocation services tailored to your needs.
       </p>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto ">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-12 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
-            className=" rounded-3xl p-8 bg-white shadow-md hover:shadow-2xl transition-all duration-300"
+            className="rounded-3xl p-6 sm:p-8 bg-white shadow-md hover:shadow-2xl transition-all duration-300"
           >
             {/* Icon */}
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange-200 text-orange-600 mb-6 text-4xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-orange-200 text-orange-600 mb-5 sm:mb-6 text-3xl sm:text-4xl">
               {service.icon}
             </div>
 
             {/* Title */}
-            <h3 className="font-bold text-2xl mb-3">
+            <h3 className="font-bold text-xl sm:text-2xl mb-2 sm:mb-3">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
               {service.desc}
             </p>
           </div>
         ))}
       </div>
-      <button className="text-center px-4 py-2 mx-auto mt-8 rounded-full bg-orange-500 text-white text-xl  flex items-center gap-2 cursor-pointer shadow-md  hover:shadow-xl transition-all duration-300">View All Services <FaLongArrowAltRight/> </button>
-    </div>
+
+      {/* CTA Button */}
+      <div className="flex justify-center mt-10 sm:mt-12">
+        <button className="px-6 py-3 rounded-full bg-orange-500 text-white text-base sm:text-lg flex items-center gap-2 shadow-md hover:shadow-xl hover:bg-orange-600 transition-all duration-300">
+          View All Services <FaLongArrowAltRight />
+        </button>
+      </div>
+
+    </section>
   );
 };
 
-export default OurSerives;
+export default OurServices;
