@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaTruckMoving, FaPhone } from "react-icons/fa6";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -21,16 +21,23 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-10 text-lg font-semibold">
-          {["Home", "About", "Services", "Contact"].map((item) => (
-            <li
-              key={item}
-              className="cursor-pointer hover:underline underline-offset-8 decoration-amber-600"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+      <ul className="hidden md:flex items-center gap-10 text-lg font-semibold">
+  {[
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+  ].map((item) => (
+    <li key={item.name}>
+      <Link
+        href={item.href}
+        className="cursor-pointer hover:underline underline-offset-8 decoration-amber-600"
+      >
+        {item.name}
+      </Link>
+    </li>
+  ))}
+</ul>
 
         {/* Desktop Call Button */}
         <button onClick={handleCallNow} className="hidden md:flex items-center gap-2 px-5 py-2 text-lg font-semibold rounded-full bg-orange-500 hover:bg-orange-600 transition">
