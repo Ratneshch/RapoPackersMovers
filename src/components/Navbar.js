@@ -56,28 +56,39 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-black/90 backdrop-blur-md text-white transition-all duration-300 ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-        }`}
-      >
-        <ul className="flex flex-col items-center gap-6 py-6 text-lg font-semibold">
-          {["Home", "About", "Services", "Contact"].map((item) => (
-            <li
-              key={item}
-              className="cursor-pointer hover:text-orange-500"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </li>
-          ))}
+  className={`md:hidden bg-black/90 backdrop-blur-md text-white transition-all duration-300 ${
+    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+  }`}
+>
+  <ul className="flex flex-col items-center gap-6 py-6 text-lg font-semibold">
+    {[
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Services", href: "/services" },
+      { name: "Contact", href: "/contact" },
+    ].map((item) => (
+      <li key={item.name}>
+        <Link
+          href={item.href}
+          className="hover:text-orange-500"
+          onClick={() => setIsOpen(false)}
+        >
+          {item.name}
+        </Link>
+      </li>
+    ))}
 
-          {/* Mobile Call Button */}
-          <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 transition">
-            <FaPhone />
-            Call Now
-          </button>
-        </ul>
-      </div>
+    {/* Mobile Call Button */}
+    <a
+      href="tel:+91XXXXXXXXXX"
+      className="flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 transition"
+    >
+      <FaPhone />
+      Call Now
+    </a>
+  </ul>
+</div>
+
     </nav>
   );
 };
