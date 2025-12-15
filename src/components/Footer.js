@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <footer className="w-full bg-gradient-to-br from-[#0b1020] via-[#0e1a35] to-[#07142b] text-gray-300 px-4 sm:px-6 pt-16 sm:pt-20">
-
+      
       {/* Top Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 pb-16">
 
@@ -51,31 +51,43 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="text-center sm:text-left">
-          <h3 className="text-white font-semibold text-lg mb-6">
-            Quick Links
-          </h3>
-          <ul className="space-y-4 text-sm">
-            <li className="hover:text-orange-400 cursor-pointer"><a href="/">Home</a></li>
-            <li className="hover:text-orange-400 cursor-pointer"><a href="/about">About Us</a></li>
-            <li className="hover:text-orange-400 cursor-pointer"><a href="/services">Services</a></li>
-            <li className="hover:text-orange-400 cursor-pointer"><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
+        {/* Quick Links + Services (Mobile side-by-side) */}
+        <div className="grid grid-cols-2 gap-8 sm:col-span-2 lg:col-span-2">
 
-        {/* Services */}
-        <div className="text-center sm:text-left">
-          <h3 className="text-white font-semibold text-lg mb-6">
-            Our Services
-          </h3>
-          <ul className="space-y-4 text-sm">
-            <li className="hover:text-orange-500 cursor-pointer"><a href="/services"></a>House Shifting</li>
-            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Office Relocation</a></li>
-            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Local Moving</a></li>
-            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Packing Services</a></li>
-            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Transportation</a></li>
-          </ul>
+          {/* Quick Links */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Quick Links
+            </h3>
+            <ul className="space-y-4 text-sm">
+              <li className="hover:text-orange-400">
+                <a href="/">Home</a>
+              </li>
+              <li className="hover:text-orange-400">
+                <a href="/about">About Us</a>
+              </li>
+              <li className="hover:text-orange-400">
+                <a href="/services">Services</a>
+              </li>
+              <li className="hover:text-orange-400">
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Our Services
+            </h3>
+            <ul className="space-y-4 text-sm">
+              <li className="hover:text-orange-500">House Shifting</li>
+              <li className="hover:text-orange-500">Office Relocation</li>
+              <li className="hover:text-orange-500">Local Moving</li>
+              <li className="hover:text-orange-500">Packing Services</li>
+              <li className="hover:text-orange-500">Transportation</li>
+            </ul>
+          </div>
         </div>
 
         {/* Contact */}
@@ -85,7 +97,8 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-6 text-sm">
-            <li className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+            
+            <li className="flex flex-row items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
                 <FaPhoneAlt />
               </div>
@@ -97,7 +110,7 @@ const Footer = () => {
               </div>
             </li>
 
-            <li className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+            <li className="flex flex-row items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
                 <FaEnvelope />
               </div>
@@ -109,7 +122,7 @@ const Footer = () => {
               </div>
             </li>
 
-            <li className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+            <li className="flex flex-row items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center">
                 <FaMapMarkerAlt />
               </div>
@@ -120,6 +133,7 @@ const Footer = () => {
                 </p>
               </div>
             </li>
+
           </ul>
         </div>
       </div>
@@ -139,6 +153,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
+
     </footer>
   );
 };
