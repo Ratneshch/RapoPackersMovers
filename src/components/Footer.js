@@ -34,13 +34,15 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-6">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61583242347663"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 transition-all flex items-center justify-center"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/rapopackers/"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 transition-all flex items-center justify-center"
             >
               <FaInstagram />
