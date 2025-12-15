@@ -16,7 +16,9 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl md:text-3xl font-bold cursor-pointer">
+          <Link href="/">
           <img src="/logor.png" className="md:h-18 h-12"/>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
