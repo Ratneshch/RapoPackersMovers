@@ -30,7 +30,7 @@ const Footer = () => {
 
           <p className="text-sm leading-relaxed max-w-sm mx-auto sm:mx-0">
             Your trusted partner for safe and reliable packing & moving
-            services. Since 1995, we've been delivering excellence in
+            services. Since 2024, we've been delivering excellence in
             relocation.
           </p>
 
@@ -57,10 +57,10 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-4 text-sm">
-            <li className="hover:text-orange-400 cursor-pointer">Home</li>
-            <li className="hover:text-orange-400 cursor-pointer">About Us</li>
-            <li className="hover:text-orange-400 cursor-pointer">Services</li>
-            <li className="hover:text-orange-400 cursor-pointer">Contact</li>
+            <li className="hover:text-orange-400 cursor-pointer"><a href="/">Home</a></li>
+            <li className="hover:text-orange-400 cursor-pointer"><a href="/about">About Us</a></li>
+            <li className="hover:text-orange-400 cursor-pointer"><a href="/services">Services</a></li>
+            <li className="hover:text-orange-400 cursor-pointer"><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
@@ -70,11 +70,11 @@ const Footer = () => {
             Our Services
           </h3>
           <ul className="space-y-4 text-sm">
-            <li className="hover:text-orange-500 cursor-pointer">House Shifting</li>
-            <li className="hover:text-orange-500 cursor-pointer">Office Relocation</li>
-            <li className="hover:text-orange-500 cursor-pointer">Local Moving</li>
-            <li className="hover:text-orange-500 cursor-pointer">Packing Services</li>
-            <li className="hover:text-orange-500 cursor-pointer">Transportation</li>
+            <li className="hover:text-orange-500 cursor-pointer"><a href="/services"></a>House Shifting</li>
+            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Office Relocation</a></li>
+            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Local Moving</a></li>
+            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Packing Services</a></li>
+            <li className="hover:text-orange-500 cursor-pointer"><a href="/services">Transportation</a></li>
           </ul>
         </div>
 
