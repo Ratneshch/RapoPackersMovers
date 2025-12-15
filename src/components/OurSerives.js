@@ -85,7 +85,7 @@ const OurServices = () => {
       {/* CTA Button */}
       <div className="flex justify-center mt-10 sm:mt-12">
         <button className="px-6 py-3 rounded-full bg-orange-500 text-white text-base sm:text-lg flex items-center gap-2 shadow-md hover:shadow-xl hover:bg-orange-600 transition-all duration-300">
-          View All Services <FaLongArrowAltRight />
+        <a href="/services">View All Services</a>   <FaLongArrowAltRight />
         </button>
       </div>
 
