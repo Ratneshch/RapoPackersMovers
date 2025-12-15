@@ -20,6 +20,9 @@ const ContactUs = () => {
     message: "",
   });
 
+  // ✅ ONLY ADDITION
+  const [showToast, setShowToast] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -37,7 +40,10 @@ const ContactUs = () => {
       const data = await res.json();
 
       if (res.ok && data.success) {
-        alert("Message sent successfully!");
+        // ✅ ONLY CHANGE (alert → toast)
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3000);
+
         setForm({
           name: "",
           email: "",
@@ -56,6 +62,13 @@ const ContactUs = () => {
 
   return (
     <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+
+      {/* ✅ ONLY ADDITION: TOAST */}
+      {showToast && (
+        <div className="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
+          Message sent successfully, we will reach you shortly ✅
+        </div>
+      )}
 
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center mt-6 sm:mt-8">
