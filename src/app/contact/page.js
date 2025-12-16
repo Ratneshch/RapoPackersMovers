@@ -150,7 +150,7 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="w-full pl-12 py-3 rounded-xl border"
+                className="w-full pl-12 py-2 rounded-xl border"
               />
             </div>
 
@@ -161,7 +161,7 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="Email Address"
                 required
-                className="w-full px-6 py-3 rounded-xl border"
+                className="w-full px-6 py-2 rounded-xl border"
               />
               <input
                 name="phone"
@@ -169,7 +169,7 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="Phone Number"
                 required
-                className="w-full px-6 py-3 rounded-xl border"
+                className="w-full px-6 py-2 rounded-xl border"
               />
             </div>
 
@@ -179,14 +179,14 @@ const ContactUs = () => {
                 value={form.fromLocation}
                 onChange={handleChange}
                 placeholder="Moving From"
-                className="w-full px-6 py-3 rounded-xl border"
+                className="w-full px-6 py-2 rounded-xl border"
               />
               <input
                 name="toLocation"
                 value={form.toLocation}
                 onChange={handleChange}
                 placeholder="Moving To"
-                className="w-full px-6 py-3 rounded-xl border"
+                className="w-full px-6 py-2 rounded-xl border"
               />
             </div>
 
