@@ -65,7 +65,7 @@ const ContactUs = () => {
 
       {/* ✅ ONLY ADDITION: TOAST */}
       {showToast && (
-        <div className="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
+        <div className="fixed top-30 right-3 z-50 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
           Message sent successfully, we will reach you shortly ✅
         </div>
       )}
